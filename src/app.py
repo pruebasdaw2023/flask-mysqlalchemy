@@ -10,6 +10,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+#print("MIERDA", os.getenv('SQLALCHEMY_DATABASE_URI'))
+
 app.app_context().push()
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
